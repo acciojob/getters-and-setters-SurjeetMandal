@@ -7,11 +7,9 @@ class Person {
 	get name(){
 		return this.Name;
 	}
-	set age(value){
-		if(typeof age !== 'number' || value < 0){
-			throw new Error('Age must be positive number.');
+	set age(age){
+		this.Age = age;
 		}
-		this.age = value;
 	}
 }
 
