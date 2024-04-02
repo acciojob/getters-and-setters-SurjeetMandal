@@ -7,21 +7,22 @@ class Person {
 	get name(){
 		return this.Name;
 	}
-	set age(Age){
-		if(typeof age !== 'number'){
-			throw new Error('Age must be number.');
+	set age(value){
+		if(typeof age !== 'number' || value < 0){
+			throw new Error('Age must be positive number.');
 		}
+		this.age = value;
 	}
 }
 
 class Student extends Person {
-	study(Name){
+	study(name){
 		console.log(name+"is studying");
 	}
 }
 
 class Teacher extends Person {
-	teach(Name){
+	teach(name){
 		console.log(name+"is teaching")
 	}
 }
