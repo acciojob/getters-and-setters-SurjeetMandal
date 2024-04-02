@@ -1,29 +1,28 @@
 class Person {
-	constructor(name, age){
-		this.Name = name,
-		this.Age = age
-	}
-	get name(){
-		return this.Name;
-	}
-	set age(value){
-		if(typeof value !== 'number' || value < 0){
-			throw new Error('Age must be a positive number.');
-		}
-		this.Age = value;
-	}
+  constructor(name, age) {
+    this._name = name;
+    this._age = age;
+  }
+
+  get name() {
+    return this._name;
+  }
+
+  set age(age) {
+    this._age = age;
+  }
 }
 
 class Student extends Person {
-	study(name){
-		console.log(name + " is studying");
-	}
+  study() {
+    console.log(${this.name} is studying);
+  }
 }
 
 class Teacher extends Person {
-	teach(name){
-		console.log(name + " is teaching");
-	}
+  teach() {
+    console.log(${this.name} is teaching);
+  }
 }
 
 // Do not change the code below this line
