@@ -1,13 +1,13 @@
 //complete this code
 class Person {
 	constructor(name,age){
-		this.name = Name,
-		this.age = Age
+		this.Name = name,
+		this.Age = age
 	}
-	get Name(){
-		return this.name;
+	get name(){
+		return this.Name;
 	}
-	set Age(age){
+	set age(Age){
 		if(typeof age !== 'number'){
 			throw new Error('Age must be number.');
 		}
